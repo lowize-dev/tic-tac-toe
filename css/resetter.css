@@ -1,0 +1,41 @@
+/* Archivo Font For Headings */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* Permanent Marker Font For Primary */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --backup-font:  "Arial", "Helvetica", sans-serif;
+    --heading-font: "Archivo Black", var(--backup-font);
+    --primary-font: "Permanent Marker",
+                      "Merienda",
+                      "Archivo Black", var(--backup-font);
+
+    --white: #fff;
+    --black: rgba(0, 0, 0, 0.7);
+    --grey: #dfdfdf;
+    --red: #ff9393;
+    --green: #9aeabc;
+    --blue: #8383ffe0;
+}
+
+body {
+    background: var(--blue);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

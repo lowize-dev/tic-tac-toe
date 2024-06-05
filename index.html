@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resetter.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- MAIN CONTAINER -- ROOT ELEMENT -->
+    <main id="container">
+        <!-- MODAL WINNING -- DEFAULT NOT SHOWN -->
+        <section id="modal">
+
+            <section id="modal-text-content">
+                <img src="./img/party.png" alt="">
+                <h1 id="modal-status">X WON THE MATCH!!</h1>            
+            </section>
+
+            <section id="modal-button-container">
+                <button type="button" id="restart-btn">PLAY AGAIN</button>                
+            </section>
+
+        </section>
+
+        <!-- HEADER -- DEFAULT PLAYER [] TURN -->
+        <header>
+            <span id="game-status-container">
+                <h1 id="game-status-text"></h1>
+            </span>
+
+            <button id="restart-btn"><i class="material-icons">refresh</i></button>            
+        </header>
+
+        <!-- GAME BOARD CONTAINER -- 3X3 CSS GRID -->
+        <section id="cell-container">
+            <button id="cell" data-index="0"></button>
+            <button id="cell" data-index="1"></button>
+            <button id="cell" data-index="2"></button>
+            <button id="cell" data-index="3"></button>
+            <button id="cell" data-index="4"></button>
+            <button id="cell" data-index="5"></button>
+            <button id="cell" data-index="6"></button>
+            <button id="cell" data-index="7"></button>
+            <button id="cell" data-index="8"></button>
+        </section>
+    </main>
+
+    <!-- FOR THIS SCRIPT ES6 MODULE -->
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>

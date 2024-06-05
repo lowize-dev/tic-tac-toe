@@ -1,0 +1,154 @@
+@import url("./resetter.css");
+
+/* HEADER */
+
+header {
+    height: min(60px, 20dvw);    
+    background: var(--blue);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+
+    gap: min(10px, 3dvw);
+    padding-inline: min(0.8rem, 3dvw);    
+
+    font-family: var(--heading-font);    
+    letter-spacing: 1px;
+    font-size: min(0.7rem, 2.5dvw);
+    color: var(--white);    
+}
+
+header span {   
+    cursor: default; 
+    border-radius: 8px;
+    height: 70%;
+    flex: 1;
+    border: 1px solid var(--white);
+    display: grid;
+    place-content: center;
+}
+
+header > button {
+    display: grid;
+    place-content: center;
+    padding: min(0.4rem, 2dvw);
+    border-radius: 5px;
+    color: var(--white);
+    color: var(--blue);
+    cursor: pointer;
+}
+
+/* CONTAINER - ROOT */
+
+main {
+    min-height: min(460px, 100dvw);
+    width: min(400px, 90dvw);
+    padding: 0.75rem;
+    
+    border-radius: 15px;
+    background: var(--white);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* BOARD */
+
+#cell-container {
+    flex: 1;
+    height: min(350px, 80dvw);    
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: min(15px, 4dvw);
+}
+
+#cell {
+    font-size: min(4rem, 15dvw);
+    border-radius: 10px;
+    font-family: var(--primary-font);
+    height: min(109px, 24.5dvw);    
+    cursor: pointer;
+}
+
+.winner {
+    background: var(--green);
+    color: var(--white);
+}
+
+.tie {
+    background: var(--grey);
+}
+
+/* modal */
+
+#modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: min(270px, 65dvw);
+    width: min(300px, 70%);
+    z-index: 999;
+    transform: translate(-50%, -35%);
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 30px var(--black);
+    padding: 0.7rem;
+}
+
+#modal {
+    display: none;
+    flex-direction: column;
+}
+
+#modal-text-content {    
+    flex: 1;
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+    justify-content: center;
+    gap: min(20px, 5dvw);
+}
+
+#modal-text-content img {    
+    width: min(80px, 20dvw);    
+}
+
+#modal-text-content h1 {
+    font-family: var(--primary-font);
+    font-size: min(1.4rem, 5dvw);
+    font-weight: 100;
+    padding-inline: 0.7rem;    
+}
+
+#modal-button-container {
+    flex: 0.35;    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+#modal-button-container > button { 
+    color: var(--white);   
+    background: var(--blue);
+    width: min(150px, 35dvw);
+    padding-block: min(0.8rem, 3dvw);
+    border-radius: 2px;
+    font-size: min(0.9rem, 3dvw);    
+    font-family: var(--heading-font);    
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+#modal-button-container > button:hover {
+    transform: scale(1.05);
+}
+
+#modal-button-container > button:active {
+    transform: scale(0.95);
+}
